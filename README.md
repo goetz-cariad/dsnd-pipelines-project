@@ -1,55 +1,59 @@
-# README Template
+# NLP Pipeline Project
+A project from the [udacity Data Scientist nanodegree](https://www.udacity.com/blog/2018/05/introducing-udacity-data-scientist-nanodegree-program.html).  
+We start with a dataset of reviews and set up a natural language processing pipeline to analyse and predict if the customer recommends a product based on the review.
 
-Below is a template provided for use when building your README file for students.
+## Date created
+March 12 2026
 
-# Project Title
+## Motivation / Scenario
+You've recently joined "StyleSense", a rapidly growing online women's clothing retailer, as a data scientist. StyleSense is known for its trendy and affordable fashion, and its customer base has exploded in recent months. This influx of new customers is fantastic for business, but it has created a challenge: a backlog of product reviews with missing data. Customers are still leaving valuable feedback in the text of their reviews, but they aren't always indicating whether they recommend the product.
 
-Project description goes here.
+Your first task at StyleSense is to leverage the existing data– those reviews with complete information – to build a predictive model.
 
-## Getting Started
+This model will analyze the text of a review, the customer's age, the product category, and other relevant information to predict whether or not the customer would recommend the product. By automating this process, you'll help StyleSense gain valuable insights into customer satisfaction, identify trending products, and ultimately provide a better shopping experience for their growing customer base.
 
-Instructions for how to get a copy of the project running on your local machine.
+The future of fashion forecasting is in your hands!
 
-### Dependencies
+## Features
+- Pipeline distinguishes numerical, categorical and text data
+- Sentiment Analysis based on pretrained model
+- Random Forest Classifier to predict recommendation
 
-```
-Examples here
-```
+
+## Getting started
+### Prerequisites
+- Python >= 3.13.7
+- (Jupyter) notebook
+- pandas
+- numpy
+- scikit-learn
+- matplotlib
+- seaborn
+- spacy
+- torch
+- transformers
+- scipy
+- joblib
+(exact versions for packages to be found in requirements.txt)
 
 ### Installation
+1. Clone the repo:
+    ``` git clone <repository-url> ```
+2. Install the requirements
+    ``` pip install requirements.txt ```
+3. the /models folder is optional. It contains the pretrained pipeline components.  
+If the pipeline should be trained from scratch either delete the models or set the ***retrain*** variable in the includes and installs chapter to **True**.
 
-Step by step explanation of how to get a dev environment running.
 
-List out the steps
+## Files
+- nlp_pipeline.ipynb - The main Jupyter notebook containing all code and comments
+- requirements.txt - necessary python libraries to install
+- /data folder containg
+    - raw data file (reviews.csv)
+- /model folder containing
+    - pretrained pipeline components (feature_engineering.pkl, random_forest.pkl, best_forest.pkl)
+    - transformed training data (X_train_transformed.npz)
 
-```
-Give an example here
-```
 
-## Testing
-
-Explain the steps needed to run any automated tests
-
-### Break Down Tests
-
-Explain what each test does and why
-
-```
-Examples here
-```
-
-## Project Instructions
-
-This section should contain all the student deliverables for this project.
-
-## Built With
-
-* [Item1](www.item1.com) - Description of item
-* [Item2](www.item2.com) - Description of item
-* [Item3](www.item3.com) - Description of item
-
-Include all items used to build project.
-
-## License
-
-[License](LICENSE.txt)
+## Acknoledgements
+- Credits for setting up this challenge go to the [udacity](https://www.udacity.com/) team.
